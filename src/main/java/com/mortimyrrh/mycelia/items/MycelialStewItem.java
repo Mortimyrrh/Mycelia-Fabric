@@ -14,7 +14,17 @@ import java.util.List;
 
 public class MycelialStewItem extends Item {
     public MycelialStewItem() {
-        super(new Item.Settings().recipeRemainder(Items.BOWL).maxCount(1).rarity(Rarity.RARE).food(FoodComponents.MUSHROOM_STEW).group(ItemGroup.FOOD));
+        super(new Item.Settings().recipeRemainder(Items.BOWL)
+                .maxCount(1)
+                .rarity(Rarity.RARE)
+                .food(new FoodComponent.Builder()
+                        .hunger(6)
+                        .saturationModifier(7)
+                        .snack()
+                        .alwaysEdible()
+                        .statusEffect(new StatusEffectInstance(Mycelia.MYCELIAL_RESISTANCE, (20 * 5)), 1.0f)
+                        .build())
+                .group(ItemGroup.FOOD));
     }
 
     @Override
