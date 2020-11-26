@@ -5,6 +5,7 @@
 ## Info
 
 This mod is curently under development, check back soon.
+- Added Mycelia Stew
 
 
 
