@@ -1,6 +1,6 @@
 # Mycelia 1.16.4
 
-![Mycelia Logo] (https://raw.githubusercontent.com/Mortimyrrh/Mycelia/master/src/main/resources/assets/mycelia/icon.png)
+![Mycelia Logo](https://raw.githubusercontent.com/Mortimyrrh/Mycelia/master/src/main/resources/assets/mycelia/icon.png)
 
 ## Info
 
