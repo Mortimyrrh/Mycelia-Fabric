@@ -1,6 +1,8 @@
 # Mycelia 1.16.4
 
-![Mycelia Logo](https://raw.githubusercontent.com/Mortimyrrh/Mycelia/master/src/main/resources/assets/mycelia/textures/items/mycelial_stew.png){:height="200px" width="200px"}.
+![Mycelia Logo](https://raw.githubusercontent.com/Mortimyrrh/Mycelia/master/src/main/resources/assets/mycelia/textures/items/mycelial_stew.png)
+
+<img src="https://raw.githubusercontent.com/Mortimyrrh/Mycelia/master/src/main/resources/assets/mycelia/textures/items/mycelial_stew.png" width="200" height="200">
 
 ## Info
 
