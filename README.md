@@ -1,9 +1,11 @@
-# Fabric Example Mod
+# Mycelia 1.16.4
 
-## Setup
+## Info
 
-For setup instructions please see the [fabric wiki page](https://fabricmc.net/wiki/tutorial:setup) that relates to the IDE that you are using.
+This mod is curently under development, check back soon.
+
+
 
 ## License
 
-This template is available under the CC0 license. Feel free to learn from it and incorporate it in your own projects.
+This mod is available under the MIT license. Feel free to learn from it and copy bits in your own projects.
