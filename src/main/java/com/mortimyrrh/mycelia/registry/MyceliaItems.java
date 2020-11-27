@@ -7,7 +7,7 @@ import net.minecraft.item.FoodComponent;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 
-public class ModItems {
+public class MyceliaItems {
 
     public static final MycelialStewItem MYCELIAL_STEW = new MycelialStewItem();
 

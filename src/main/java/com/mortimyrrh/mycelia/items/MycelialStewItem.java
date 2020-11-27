@@ -1,6 +1,7 @@
 package com.mortimyrrh.mycelia.items;
 
 import com.mortimyrrh.mycelia.Mycelia;
+import com.mortimyrrh.mycelia.registry.MyceliaEffects;
 import net.minecraft.client.item.TooltipContext;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
@@ -22,7 +23,7 @@ public class MycelialStewItem extends Item {
                         .saturationModifier(7)
                         .snack()
                         .alwaysEdible()
-                        .statusEffect(new StatusEffectInstance(Mycelia.MYCELIAL_RESISTANCE, (20 * 5)), 1.0f)
+                        .statusEffect(new StatusEffectInstance(MyceliaEffects.MYCELIAL_RESISTANCE, (20 * 25)), 1.0f)
                         .build())
                 .group(ItemGroup.FOOD));
     }
