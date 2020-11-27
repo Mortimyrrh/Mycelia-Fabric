@@ -32,4 +32,6 @@ public class MycelialStewItem extends Item {
     public void appendTooltip(ItemStack itemStack, World world, List<Text> tooltip, TooltipContext tooltipContext) {
         tooltip.add(new TranslatableText("item.mycelia.mycelial_stew.tooltip"));
     }
+
+
 }

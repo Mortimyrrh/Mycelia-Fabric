@@ -4,6 +4,11 @@ import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectType;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.structure.StructurePieceWithDimensions;
+import net.minecraft.world.dimension.DimensionOptions;
+import net.minecraft.world.dimension.DimensionType;
+
+import java.awt.*;
 
 public class MycelialResistanceEffect extends StatusEffect {
     public MycelialResistanceEffect() {
@@ -20,7 +25,11 @@ public class MycelialResistanceEffect extends StatusEffect {
     @Override
     public void applyUpdateEffect(LivingEntity entity, int amplifier) {
         if (entity instanceof PlayerEntity) {
-           // ((PlayerEntity) entity).addExperience(1 << amplifier);
+            if(!entity.world.getDimension().equals(DimensionType.THE_NETHER_ID)) {
+                //((PlayerEntity) entity).teleport(entity.getX(), entity.getY(), entity.getZ());
+                //((PlayerEntity) entity).
+                // var4.mcServer.getConfigurationManager().transferPlayerToDimension(var4, 20, new TeleporterAlzairio(worldserver));
+            }
         }
     }
 }
