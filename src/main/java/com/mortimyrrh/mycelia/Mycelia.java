@@ -3,11 +3,13 @@ package com.mortimyrrh.mycelia;
 import com.mortimyrrh.mycelia.effects.MycelialExsposureDamage;
 import com.mortimyrrh.mycelia.registry.MyceliaItems;
 import com.mortimyrrh.mycelia.registry.MyceliaEffects;
+import com.mortimyrrh.mycelia.registry.MyceliaSounds;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
 import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
+import net.minecraft.sound.SoundEvent;
 import net.minecraft.util.Identifier;
 
 public class Mycelia implements ModInitializer {
@@ -27,5 +29,6 @@ public class Mycelia implements ModInitializer {
     public void onInitialize() {
         MyceliaItems.registerItems();
         MyceliaEffects.registerEffects();
+        MyceliaSounds.registerSounds();
     }
 }

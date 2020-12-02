@@ -11,6 +11,10 @@
   "effect.mycelia.mycelial_resistance": "Mycelial Resistance",
   "effect.mycelia.mycelial_decay": "Mycelial Decay",
 
+  "_": "->------------------------]  Sounds  [------------------------<-",
+
+  "subtitles.mycelia.portal1": "Mycelial Portal",
+
   "_": "->------------------------]  UI & Messages  [------------------------<-",
   "itemGroup.mycelia.main_tab": "Mycelia",
 
