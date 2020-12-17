@@ -1,12 +1,13 @@
 # Mycelia 1.16.4
 
-![Mycelia Logo](https://raw.githubusercontent.com/Mortimyrrh/Mycelia/master/src/main/resources/assets/mycelia/textures/items/mycelial_stew.png)
+![Mycelia Logo](https://raw.githubusercontent.com/Mortimyrrh/Mycelia/master/src/main/resources/assets/mycelia/logo.png)
 
 ## Info
 
 This mod is curently under development, check back soon.
 - Added Mycelia Stew
-
+- Added Mycelial Effecs
+- Added Void Dimension
 
 
 ## License
