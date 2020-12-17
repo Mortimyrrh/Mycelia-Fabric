@@ -3,7 +3,7 @@
     "type": "mycelia:mycelial_network",
     "biome_source": {
       "type": "minecraft:fixed",
-      "biome": "minecraft:plains"
+      "biome": "mycelia:mycelial_planes"
     }
   },
   "type": "mycelia:mycelial_network_type"

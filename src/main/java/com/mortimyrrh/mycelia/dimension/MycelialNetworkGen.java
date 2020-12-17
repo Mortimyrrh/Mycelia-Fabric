@@ -3,10 +3,8 @@ package com.mortimyrrh.mycelia.dimension;
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
 import net.minecraft.block.BlockState;
-import net.minecraft.world.BlockView;
-import net.minecraft.world.ChunkRegion;
-import net.minecraft.world.Heightmap;
-import net.minecraft.world.WorldAccess;
+import net.minecraft.data.report.BiomeListProvider;
+import net.minecraft.world.*;
 import net.minecraft.world.biome.source.BiomeSource;
 import net.minecraft.world.chunk.Chunk;
 import net.minecraft.world.gen.StructureAccessor;
@@ -17,16 +15,16 @@ import net.minecraft.world.gen.chunk.VerticalBlockSample;
 import java.util.Collections;
 import java.util.Optional;
 
-public class MycelialPlanesGen extends ChunkGenerator {
+public class MycelialNetworkGen extends ChunkGenerator {
 
-    public static final Codec<MycelialPlanesGen> CODEC = RecordCodecBuilder.create((instance) ->
+    public static final Codec<MycelialNetworkGen> CODEC = RecordCodecBuilder.create((instance) ->
             instance.group(
                     BiomeSource.CODEC.fieldOf("biome_source")
                             .forGetter((generator) -> generator.biomeSource)
-            ).apply(instance, instance.stable(MycelialPlanesGen::new))
+            ).apply(instance, instance.stable(MycelialNetworkGen::new))
     );
 
-    public MycelialPlanesGen(BiomeSource biomeSource) {
+    public MycelialNetworkGen(BiomeSource biomeSource) {
         super(biomeSource, new StructuresConfig(Optional.empty(), Collections.emptyMap()));
     }
 
@@ -55,4 +53,7 @@ public class MycelialPlanesGen extends ChunkGenerator {
     public BlockView getColumnSample(int x, int z) {
         return new VerticalBlockSample(new BlockState[0]);
     }
+
+    @Override
+    public int getSeaLevel() { return 4; }
 }

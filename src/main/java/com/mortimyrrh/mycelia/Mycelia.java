@@ -1,18 +1,9 @@
 package com.mortimyrrh.mycelia;
 
-import com.mortimyrrh.mycelia.dimension.MycelialPlanesGen;
-import com.mortimyrrh.mycelia.registry.MyceliaDimensions;
-import com.mortimyrrh.mycelia.registry.MyceliaItems;
-import com.mortimyrrh.mycelia.registry.MyceliaEffects;
-import com.mortimyrrh.mycelia.registry.MyceliaSounds;
+import com.mortimyrrh.mycelia.registry.*;
 import net.fabricmc.api.ModInitializer;
-import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
-import net.minecraft.item.ItemGroup;
-import net.minecraft.item.ItemStack;
-import net.minecraft.util.Identifier;
-import net.minecraft.util.registry.Registry;
-import net.minecraft.util.registry.RegistryKey;
-import net.minecraft.world.World;
+import net.fabricmc.fabric.api.biome.v1.OverworldBiomes;
+import net.fabricmc.fabric.mixin.biome.VanillaLayeredBiomeSourceAccessor;
 
 public class Mycelia implements ModInitializer {
 
@@ -23,6 +14,8 @@ public class Mycelia implements ModInitializer {
         MyceliaItems.registerItems();
         MyceliaEffects.registerEffects();
         MyceliaSounds.registerSounds();
-        MyceliaDimensions.registerChunkGens();
+        MyceliaDimensions.registerDimensions();
+
+        VanillaLayeredBiomeSourceAccessor.getBIOMES();
     }
 }

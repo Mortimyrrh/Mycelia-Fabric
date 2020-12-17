@@ -24,6 +24,14 @@
   "advancement.mycelia.root": "Welcome to Mycelia",
   "advancement.mycelia.root.desc": "Exsplore the World!",
 
+  "_": "->------------------------]  Dimensions  [------------------------<-",
+  "dimension.mycelia.mycelial_network": "Mycelial Network",
+
+
+  "_": "->------------------------]  Biomes  [------------------------<-",
+  "biome.mycelia.mycelial_planes": "Mycelial Planes",
+
+
 
   "_": "_"
 }
