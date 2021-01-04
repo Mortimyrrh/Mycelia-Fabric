@@ -44,6 +44,26 @@ public class MycelialStewItem extends Item {
         tooltip.add(new TranslatableText("item.mycelia.mycelial_stew.tooltip"));
     }
 
+    private BlockPos getSafeTeleportPosNearEntity (LivingEntity entity)
+    {
+        BlockPos blockPos = getNewTeleportPosNearEntity(entity);
+
+//        if (!Objects.requireNonNull(entity.world.getBlockEntity(blockPos))
+//                .getCachedState().isAir() &&
+//            !Objects.requireNonNull(entity.world.getBlockEntity(blockPos.add(0, 1, 0)))
+//                .getCachedState().isAir()
+//            )
+        if (true)
+        {
+            // safe to teleport
+            return blockPos;
+        } else {
+            // couldn't find safe block to teleport to.
+            return entity.getBlockPos();
+        }
+    }
+
+
     private BlockPos getNewTeleportPosNearEntity (LivingEntity entity)
     {
         BlockPos blockPos = new BlockPos( // MEMORY LEAK!!!!!! (never call delete)
@@ -51,18 +71,7 @@ public class MycelialStewItem extends Item {
                 entity.getY() + (Math.random() * 5) + 2,
                 entity.getZ() + (Math.random() * 30) - 15
         );
-
-        // return null if its not a safe place to travel to else return the block.
-
-        // replace false with safe to teleport logic
-        // !Objects.requireNonNull(entity.world.getBlockEntity(blockPos)).getCachedState().isAir() &&
-        // !Objects.requireNonNull(entity.world.getBlockEntity(blockPos.add(0, 1, 0))).getCachedState().isAir()
-
-        if (false) {
-            return entity.getBlockPos();
-        } else {
             return blockPos;
-        }
     }
 
     @Override
@@ -72,18 +81,13 @@ public class MycelialStewItem extends Item {
 
         if(!entity.world.getDimension().equals(DimensionType.THE_NETHER_ID))
         {
-            BlockPos blockPos = getNewTeleportPosNearEntity(entity);
+            BlockPos blockPos = getSafeTeleportPosNearEntity(entity);
 
-            if(false) {
-                // couldn't find safe block to teleport to.
-            } else {
-                // safe to teleport
-                ((PlayerEntity) entity).teleport(
-                        blockPos.getX(),
-                        blockPos.getY(),
-                        blockPos.getZ()
-                );
-            }
+            ((PlayerEntity) entity).teleport(
+                    blockPos.getX(),
+                    blockPos.getY(),
+                    blockPos.getZ()
+            );
         }
 
         return this.isFood() ? entity.eatFood(world, stack) : stack;
